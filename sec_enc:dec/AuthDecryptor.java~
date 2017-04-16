@@ -1,0 +1,32 @@
+
+public class AuthDecryptor {
+	// This class is used to decrypt and authenticate a sequence of values that were encrypted 
+	//     by an AuthEncryptor.
+
+	
+	public static final int KeySizeBits = AuthEncryptor.KeySizeBits;
+	public static final int KeySizeBytes = AuthEncryptor.KeySizeBytes;
+
+	public static final int NonceSizeBytes = AuthEncryptor.NonceSizeBytes;
+
+
+	public AuthDecryptor(byte[] key) {
+		assert key.length == KeySizeBytes;
+
+		// IMPLEMENT THIS
+	}
+
+	public byte[] decrypt(byte[] in, byte[] nonce, boolean nonceIncluded) {
+		// Decrypt and authenticate the contents of <in>.  The value passed in will normally
+		//    have been created by calling encrypt() with the same nonce in an AuthEncryptor 
+		//    that was initialized with the same key as this AuthDecryptor.
+		// If <nonceIncluded> is true, then the nonce has been included in <in>, and
+		//    the value passed in as <nonce> will be disregarded.
+		// If <nonceIncluded> is false, then the value of <nonce> will be used.
+		// If the integrity of <in> cannot be verified, then this method returns null.   Otherwise it returns 
+		//    a newly allocated byte-array containing the plaintext value that was originally 
+		//    passed to encrypt().
+
+		return null;   // IMPLEMENT THIS
+	}
+}
